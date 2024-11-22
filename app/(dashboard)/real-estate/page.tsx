@@ -13,9 +13,9 @@ import { Separator } from "@/components/ui/separator";
 
 import { useRealEstate } from "./_hooks/use-real-estate";
 
-import { DataTable } from "../_components/ui/data-table";
-
 import type { RealEstateColumn } from "./_components/columns";
+
+import { DataTable } from "./_components/data-table";
 
 import { columns } from "./_components/columns";
 
@@ -29,18 +29,20 @@ export default function RealEstatePage() {
   }, [fetchRealEstate]);
 
   const formattedRealEstate: RealEstateColumn[] =
-    realEstate?.map((estate) => ({
-      ...estate,
-      id: estate.id.toString(),
-      balconyId: estate.balcony.name,
-      conditionId: estate.condition.name,
-      districtId: estate.district.name,
-      floorId: estate.floor.name,
-      roomId: estate.room.name,
-      stroreyId: estate.strorey.name,
-      typeId: estate.type.name,
-    })) ?? [];
-
+    realEstate?.map((estate) => {
+      return ({
+        ...estate,
+        id: estate.id.toString(),
+        balcony_id: estate.balcony.label,
+        condition_id: estate.condition.label,
+        district_id: estate.district.label,
+        floor_id: estate.floor.label,
+        room_id: estate.room.label,
+        strorey_id: estate.storey.label,
+        type_id: estate.type.label,
+        manager_phone: estate.description,
+      });
+    }) ?? [];
   return (
     <section className="py-12">
       <Container>

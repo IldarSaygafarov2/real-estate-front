@@ -77,10 +77,10 @@ const formSchema = z.object({
 
 interface EstateFormProps {
   initialValues:
-    | (RealEstate & {
-        images: Image[];
-      })
-    | null;
+  | (RealEstate & {
+    images: Image[];
+  })
+  | null;
 }
 
 export function EstateForm({ initialValues }: EstateFormProps) {
@@ -112,13 +112,15 @@ export function EstateForm({ initialValues }: EstateFormProps) {
   const { updateEstate, addEstate } = useRealEstate();
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+
+
     try {
       setIsLoading(true);
 
-      if (initialValues) {
-        await updateEstate(initialValues.id, values);
+      if (initialValues?.id) {
+        // await updateEstate(initialValues.id, values);
       } else {
-        await addEstate(values);
+        // await addEstate(values);
       }
 
       router.replace("/real-estate");

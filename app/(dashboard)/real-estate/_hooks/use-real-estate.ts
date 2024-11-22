@@ -1,8 +1,8 @@
 import axios from "axios";
 
 import { create } from "zustand";
+import { RealEstate } from "../_types";
 
-import type { RealEstate } from "../_types";
 
 const axiosInstance = axios.create({
   baseURL: "http://45.138.158.114:1234/api/v1",

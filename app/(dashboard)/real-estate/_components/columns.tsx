@@ -12,16 +12,16 @@ export type RealEstateColumn = {
   description: string | null;
   notes: string | null;
   price: string;
-  ownerPhone: string | null;
-  managerPhone: string | null;
-  realtorPhone: string | null;
-  balconyId: string;
-  conditionId: string;
-  districtId: string;
-  floorId: string;
-  roomId: string;
-  stroreyId: string;
-  typeId: string;
+  owner_phone: string | null;
+  manager_phone: string | null;
+  realtor_phone: string | null;
+  balcony_id: string;
+  condition_id: string;
+  district_id: string;
+  floor_id: string;
+  room_id: string;
+  strorey_id: string;
+  type_id: string;
 };
 
 export const columns: ColumnDef<RealEstateColumn>[] = [
@@ -65,7 +65,7 @@ export const columns: ColumnDef<RealEstateColumn>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Номер владельца" />
     ),
-    accessorKey: "ownerPhone",
+    accessorKey: "owner_phone",
     meta: {
       filterVariant: "text",
     },
@@ -74,7 +74,7 @@ export const columns: ColumnDef<RealEstateColumn>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Номер руководителя" />
     ),
-    accessorKey: "managerPhone",
+    accessorKey: "manager_phone",
     meta: {
       filterVariant: "text",
     },
@@ -83,7 +83,7 @@ export const columns: ColumnDef<RealEstateColumn>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Номер риелтора" />
     ),
-    accessorKey: "realtorPhone",
+    accessorKey: "realtor_phone",
     meta: {
       filterVariant: "text",
     },
@@ -92,7 +92,7 @@ export const columns: ColumnDef<RealEstateColumn>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Балкон" />
     ),
-    accessorKey: "balconyId",
+    accessorKey: "balcony_id",
     meta: {
       filterVariant: "text",
     },
@@ -101,7 +101,7 @@ export const columns: ColumnDef<RealEstateColumn>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Состояние" />
     ),
-    accessorKey: "conditionId",
+    accessorKey: "condition_id",
     meta: {
       filterVariant: "text",
     },
@@ -110,7 +110,7 @@ export const columns: ColumnDef<RealEstateColumn>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Район" />
     ),
-    accessorKey: "districtId",
+    accessorKey: "district_id",
     meta: {
       filterVariant: "text",
     },
@@ -119,7 +119,7 @@ export const columns: ColumnDef<RealEstateColumn>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Этаж" />
     ),
-    accessorKey: "floorId",
+    accessorKey: "floor_id",
     meta: {
       filterVariant: "text",
     },
@@ -128,7 +128,7 @@ export const columns: ColumnDef<RealEstateColumn>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Комната" />
     ),
-    accessorKey: "roomId",
+    accessorKey: "room_id",
     meta: {
       filterVariant: "text",
     },
@@ -137,7 +137,7 @@ export const columns: ColumnDef<RealEstateColumn>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Этажность" />
     ),
-    accessorKey: "stroreyId",
+    accessorKey: "storey.label",
     meta: {
       filterVariant: "text",
     },
@@ -146,7 +146,7 @@ export const columns: ColumnDef<RealEstateColumn>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Тип" />
     ),
-    accessorKey: "typeId",
+    accessorKey: "type_id",
     meta: {
       filterVariant: "text",
     },
