@@ -5,7 +5,7 @@ import { create } from "zustand";
 import type { Storey } from "../_types";
 
 const axiosInstance = axios.create({
-  baseURL: "http://45.138.158.114:1234/api/v1",
+  baseURL: "https://gurulab-kids.uz/api/v1",
   headers: {
     "Content-Type": "application/json",
   },
